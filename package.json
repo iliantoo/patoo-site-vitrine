@@ -1,0 +1,36 @@
+{
+  "name": "patoo-site-vitrine",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tailwind.config.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iliantoo/patoo-site-vitrine.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iliantoo/patoo-site-vitrine/issues"
+  },
+  "homepage": "https://github.com/iliantoo/patoo-site-vitrine#readme",
+  "dependencies": {
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "react-router-dom": "^7.14.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.2.2",
+    "@vitejs/plugin-react": "^6.0.1",
+    "autoprefixer": "^10.5.0",
+    "postcss": "^8.5.9",
+    "tailwindcss": "^4.2.2",
+    "vite": "^8.0.8"
+  }
+}

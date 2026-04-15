@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@theme {
+  --color-patoo-white: #FEFAF8;
+  --color-patoo-light: #E8B899;
+  --color-patoo-bright: #592924;
+  --color-patoo-medium: #FF8751;
+  --color-patoo-dark: #804A41;
+  --color-patoo-black: #290409;
+  --font-fredoka: "Fredoka", sans-serif;
+}
