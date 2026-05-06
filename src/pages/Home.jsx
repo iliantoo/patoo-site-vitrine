@@ -7,46 +7,41 @@ import patooLogo from '../assets/logo/logo.png';
 import vectorRays from '../assets/logo/Vector 1.png';
 import vectorCurves from '../assets/logo/Vector 2.png';
 import toutou from '../assets/logo/toutou.png';
+import bgAccueil from '../assets/logo/background_page_accueil.png';
+import animauxAccueil from '../assets/logo/logo_page_accueil.png';
 
 const Home = () => {
   return (
     <Layout>
       {/* Hero Section */}
       <section className="max-w-6xl mx-auto px-6 pt-20 pb-12 text-center relative">
-        {/* Decorative vectors (positionnés comme la référence) */}
-        <img
-          src={vectorCurves}
-          alt=""
-          aria-hidden="true"
-          className="pointer-events-none select-none absolute -top-12 -left-10 md:-top-16 md:-left-16 w-44 md:w-56"
-        />
-
         <div className="inline-flex items-center justify-center border border-gray-300 rounded-full px-5 py-1.5 mb-8 text-sm relative bg-patoo-white">
           Hello!
           <img
             src={vectorRays}
             alt=""
             aria-hidden="true"
-            className="pointer-events-none select-none absolute -top-5 -right-6 w-10 md:w-12"
+            className="pointer-events-none select-none absolute -top-4 -right-5 w-6 md:w-7"
           />
         </div>
 
         <h1 className="text-5xl md:text-6xl font-bold mb-4 flex items-center justify-center gap-5 text-patoo-black">
-          <span>Bienvenue sur</span>
+          <span className="relative">
+            <img
+              src={vectorCurves}
+              alt=""
+              aria-hidden="true"
+              className="pointer-events-none select-none absolute -left-10 md:-left-12 -bottom-6 w-10 md:w-12"
+            />
+            Bienvenue sur
+          </span>
           <img
             src={patooLogo}
             alt="Patoo"
-            className="h-16 md:h-20 w-auto -mb-1"
+            className="h-20 md:h-24 w-auto -mb-1"
             loading="eager"
           />
         </h1>
-
-        <img
-          src={vectorCurves}
-          alt=""
-          aria-hidden="true"
-          className="pointer-events-none select-none absolute left-8 md:left-16 top-[310px] md:top-[300px] w-20 md:w-24"
-        />
 
         <div className="absolute left-6 md:left-10 top-[230px] md:top-[250px] text-left">
           <img src={toutou} alt="" aria-hidden="true" className="w-10 h-auto" />
@@ -57,15 +52,19 @@ const Home = () => {
           </p>
         </div>
 
-        {/* Illustration Placeholder */}
-        <div className="relative w-full max-w-2xl mx-auto mt-20 h-72 flex justify-center items-end">
-          <div className="w-full h-56 bg-patoo-medium rounded-t-[200px] absolute bottom-0 -z-10"></div>
-          {/* Remplacer par la vraie image SVG/PNG */}
-          <div className="relative z-10 w-full flex justify-center">
-            <div className="text-white text-opacity-50 text-xl font-bold pb-24">
-              [Illustration Animaux]
-            </div>
-          </div>
+        {/* Illustration Hero */}
+        <div className="relative w-full max-w-2xl mx-auto mt-8 pt-[14%]">
+          <img
+            src={bgAccueil}
+            alt=""
+            aria-hidden="true"
+            className="absolute bottom-0 inset-x-0 w-full block select-none pointer-events-none"
+          />
+          <img
+            src={animauxAccueil}
+            alt="Un chat et un chien Patoo"
+            className="relative z-10 block w-[90%] ml-[22%] -translate-y-[18%] select-none pointer-events-none"
+          />
         </div>
       </section>
 
@@ -76,7 +75,7 @@ const Home = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
           {projectsData.slice(0, 3).map((project) => (
             <div key={project.id} className="bg-patoo-medium rounded-3xl overflow-hidden relative h-72 flex flex-col">
-              <div className="p-5 font-medium border-b border-orange-400">
+              <div className="p-5 font-medium border-b border-patoo-black">
                 {project.title}
               </div>
               <div className="flex-grow"></div>
@@ -97,7 +96,7 @@ const Home = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
           {projectsData.slice(3, 5).map((project) => (
             <div key={project.id} className="bg-patoo-medium rounded-3xl overflow-hidden relative h-72 flex flex-col">
-              <div className="p-5 font-medium border-b border-orange-400">
+              <div className="p-5 font-medium border-b border-patoo-black">
                 {project.title}
               </div>
               <div className="flex-grow"></div>
