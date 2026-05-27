@@ -177,7 +177,7 @@ const Embers = () => {
                   {project.title}
                 </div>
                 <div className="flex-grow"></div>
-                <div className="absolute -bottom-1 -right-1 bg-patoo-white pt-3 pl-3 rounded-tl-[32px]">
+                <div className="absolute -bottom-1 -right-1 bg-patoo-white pt-3 pl-3 rounded-tl-[40px]">
                   <Link to={project.link} className="bg-patoo-black text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors">
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M7 17L17 7"></path>

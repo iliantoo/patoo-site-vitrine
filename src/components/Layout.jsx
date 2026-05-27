@@ -13,17 +13,17 @@ const Layout = ({ children }) => {
           <img src={logo} alt="Patoo" className="h-12 md:h-14 w-auto" />
         </Link>
         <nav className="flex items-center gap-6 font-medium text-[15px]">
-          <a href="#" className="hover:text-patoo-medium transition-colors">À propos</a>
-          <div className="relative group cursor-pointer flex items-center gap-1">
-            Nos projets 
+          <span className="cursor-default">À propos</span>
+          <div className="relative flex items-center gap-1 cursor-default">
+            Nos projets
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
           </div>
-          <a href="#" className="ml-2 bg-patoo-medium text-white px-5 py-2.5 rounded-full hover:bg-orange-500 transition-colors">
+          <span className="ml-2 bg-patoo-medium text-white px-5 py-2.5 rounded-full cursor-default opacity-70">
             Télécharger l'app
-          </a>
-          <a href="#" className="border-2 border-patoo-black text-patoo-black px-5 py-2 rounded-full hover:bg-patoo-black hover:text-white transition-colors">
+          </span>
+          <span className="border-2 border-patoo-black text-patoo-black px-5 py-2 rounded-full cursor-default">
             Nous contacter
-          </a>
+          </span>
         </nav>
       </header>
 

@@ -31,7 +31,7 @@ const Home = () => {
               src={vectorCurves}
               alt=""
               aria-hidden="true"
-              className="pointer-events-none select-none absolute -left-10 md:-left-12 -bottom-6 w-10 md:w-12"
+              className="pointer-events-none select-none absolute -left-10 md:-left-12 -bottom-10 w-10 md:w-12"
             />
             Bienvenue sur
           </span>
@@ -74,40 +74,55 @@ const Home = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
           {projectsData.slice(0, 3).map((project) => (
-            <div key={project.id} className="bg-patoo-medium rounded-3xl overflow-hidden relative h-72 flex flex-col">
-              <div className="p-5 font-medium border-b border-patoo-black">
+            <div key={project.id} className={`rounded-3xl overflow-hidden relative h-72 flex flex-col transition-opacity ${project.hasContent ? 'bg-patoo-medium' : 'bg-patoo-medium/40 cursor-not-allowed'}`}>
+              <div className={`p-5 font-medium border-b ${project.hasContent ? 'border-patoo-black' : 'border-patoo-black/30'}`}>
                 {project.title}
               </div>
               <div className="flex-grow"></div>
-              
-              {/* Bottom Right Cutout with Button */}
-              <div className="absolute -bottom-1 -right-1 bg-patoo-white pt-3 pl-3 rounded-tl-[32px]">
-                <Link to={project.link} className="bg-patoo-black text-white w-14 h-14 rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors">
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M7 17L17 7"></path>
-                    <path d="M7 7h10v10"></path>
-                  </svg>
-                </Link>
+              <div className="absolute -bottom-1 -right-1 bg-patoo-white pt-3 pl-3 rounded-tl-[40px]">
+                {project.hasContent ? (
+                  <Link to={project.link} className="bg-patoo-black text-white w-14 h-14 rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M7 17L17 7"></path>
+                      <path d="M7 7h10v10"></path>
+                    </svg>
+                  </Link>
+                ) : (
+                  <div className="bg-patoo-black/30 text-white w-14 h-14 rounded-full flex items-center justify-center cursor-not-allowed">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M7 17L17 7"></path>
+                      <path d="M7 7h10v10"></path>
+                    </svg>
+                  </div>
+                )}
               </div>
             </div>
           ))}
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
           {projectsData.slice(3, 5).map((project) => (
-            <div key={project.id} className="bg-patoo-medium rounded-3xl overflow-hidden relative h-72 flex flex-col">
-              <div className="p-5 font-medium border-b border-patoo-black">
+            <div key={project.id} className={`rounded-3xl overflow-hidden relative h-72 flex flex-col ${project.hasContent ? 'bg-patoo-medium' : 'bg-patoo-medium/40 cursor-not-allowed'}`}>
+              <div className={`p-5 font-medium border-b ${project.hasContent ? 'border-patoo-black' : 'border-patoo-black/30'}`}>
                 {project.title}
               </div>
               <div className="flex-grow"></div>
-              
-              <div className="absolute -bottom-1 -right-1 bg-patoo-white pt-3 pl-3 rounded-tl-[32px]">
-                <Link to={project.link} className="bg-patoo-black text-white w-14 h-14 rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors">
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M7 17L17 7"></path>
-                    <path d="M7 7h10v10"></path>
-                  </svg>
-                </Link>
+              <div className="absolute -bottom-1 -right-1 bg-patoo-white pt-3 pl-3 rounded-tl-[40px]">
+                {project.hasContent ? (
+                  <Link to={project.link} className="bg-patoo-black text-white w-14 h-14 rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M7 17L17 7"></path>
+                      <path d="M7 7h10v10"></path>
+                    </svg>
+                  </Link>
+                ) : (
+                  <div className="bg-patoo-black/30 text-white w-14 h-14 rounded-full flex items-center justify-center cursor-not-allowed">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M7 17L17 7"></path>
+                      <path d="M7 7h10v10"></path>
+                    </svg>
+                  </div>
+                )}
               </div>
             </div>
           ))}
